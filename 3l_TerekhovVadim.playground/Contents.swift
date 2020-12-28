@@ -35,10 +35,18 @@ struct casualCar {
             print ("Максимальная скорость выросла до", self.maxSpeed, "км/ч")
         }
     }
-    var isWindowOpen:Bool = false
+    var isWindowOpen:Bool = false {
+        willSet {
+            if self.isWindowOpen == false {
+                print ("Открываем окна...")
+            } else {
+                print ("Закрываем окна...")
+            }
+        }
+    }
     var isEngineStarted:Bool = false {
         willSet {
-            if isEngineStarted == false {
+            if self.isEngineStarted == false {
                 print ("Заводим двигатель...")
             } else {
                 print ("Глушим двигатель...")
@@ -109,7 +117,15 @@ struct truckCar {
             print ("Загружено \(Int16(round(self.usedCapacity/self.carryingCapacity * 100)))% от общей вместимости")
         }
     }
-    var isWindowOpen:Bool = false
+    var isWindowOpen:Bool = false {
+        willSet {
+            if self.isWindowOpen == false {
+                print ("Открываем окна...")
+            } else {
+                print ("Закрываем окна...")
+            }
+        }
+    }
     var isEngineStarted:Bool = false {
         willSet {
             if isEngineStarted == false {
@@ -134,6 +150,9 @@ struct truckCar {
     }
     mutating func turnKey() {
         self.isEngineStarted = !self.isEngineStarted
+    }
+    mutating func pressWindowButton() {
+        self.isWindowOpen = !self.isWindowOpen
     }
     func description() {
         print ("====================================")
@@ -168,5 +187,7 @@ bmwCar.description()
 bmwCar.status()
 var truck = truckCar(brand: .Scania, manufactureYear: 1999, engineSize: 11.7, enginePower: 294, transmission: .manual, carryingCapacity: 19000, usedCapacity: 700)
 truck.loadCargo(value: 17400)
+truck.turnKey()
+truck.pressWindowButton()
 truck.description()
 truck.status()
