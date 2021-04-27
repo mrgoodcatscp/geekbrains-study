@@ -1,0 +1,892 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		425CF1ACBF28F68362C1B477 /* Pods_ViTruVK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5F5AA5DEF2F85ECED278CDE3 /* Pods_ViTruVK.framework */; };
+		441564F525EA812A0013C1C6 /* NewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 441564F325EA812A0013C1C6 /* NewsCell.swift */; };
+		441564F625EA812A0013C1C6 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 441564F425EA812A0013C1C6 /* NewsCell.xib */; };
+		4415650525EA83CC0013C1C6 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415650425EA83CC0013C1C6 /* NewsController.swift */; };
+		4415650A25EA97360013C1C6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415650925EA97360013C1C6 /* News.swift */; };
+		4415650F25EB7C9C0013C1C6 /* newsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415650E25EB7C9C0013C1C6 /* newsArray.swift */; };
+		444DE41625D8042A0023F5D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DE41525D8042A0023F5D2 /* User.swift */; };
+		444DE41E25D804390023F5D2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DE41D25D804390023F5D2 /* Group.swift */; };
+		44BE7F7825EBBDBE006A9AD8 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE7F7725EBBDBE006A9AD8 /* AvatarView.swift */; };
+		44BE7F8025EBFDE2006A9AD8 /* UserPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE7F7F25EBFDE2006A9AD8 /* UserPhotoViewController.swift */; };
+		44CEE60F2622F7EC0038776F /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44CEE60E2622F7EC0038776F /* RealmManager.swift */; };
+		44D451FF2610C0AE006EF191 /* Photos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D451FE2610C0AE006EF191 /* Photos.swift */; };
+		44DCFE6F25FE424500B9CD3C /* ShowFullPhotoSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFE6E25FE424500B9CD3C /* ShowFullPhotoSegue.swift */; };
+		44DCFE842602663000B9CD3C /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFE832602663000B9CD3C /* Session.swift */; };
+		44DCFEB8260F214100B9CD3C /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFEB7260F214100B9CD3C /* NetworkManager.swift */; };
+		44DCFEC12610915E00B9CD3C /* LoginViewControllerAlter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DCFEC02610915E00B9CD3C /* LoginViewControllerAlter.swift */; };
+		44DE5AA925C9A90100BF8BB9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE5AA825C9A90100BF8BB9 /* AppDelegate.swift */; };
+		44DE5AAB25C9A90100BF8BB9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE5AAA25C9A90100BF8BB9 /* SceneDelegate.swift */; };
+		44DE5AAD25C9A90100BF8BB9 /* LoginFormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE5AAC25C9A90100BF8BB9 /* LoginFormController.swift */; };
+		44DE5AB025C9A90100BF8BB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DE5AAE25C9A90100BF8BB9 /* Main.storyboard */; };
+		44DE5AB225C9A90200BF8BB9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 44DE5AB125C9A90200BF8BB9 /* Assets.xcassets */; };
+		44DE5AB525C9A90200BF8BB9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 44DE5AB325C9A90200BF8BB9 /* LaunchScreen.storyboard */; };
+		44DE5AC025C9A90200BF8BB9 /* ViTruVKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE5ABF25C9A90200BF8BB9 /* ViTruVKTests.swift */; };
+		44DE5ACB25C9A90200BF8BB9 /* ViTruVKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DE5ACA25C9A90200BF8BB9 /* ViTruVKUITests.swift */; };
+		44DFD17025D2FBEB009A9894 /* GroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD16F25D2FBEB009A9894 /* GroupsController.swift */; };
+		44DFD17825D2FDB0009A9894 /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD17725D2FDB0009A9894 /* GroupCell.swift */; };
+		44DFD17D25D30468009A9894 /* AllGroupsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD17C25D30468009A9894 /* AllGroupsCell.swift */; };
+		44DFD18225D3048C009A9894 /* AllGroupsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD18125D3048C009A9894 /* AllGroupsController.swift */; };
+		44DFD18825D59138009A9894 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD18725D59138009A9894 /* FriendsController.swift */; };
+		44DFD19025D5916D009A9894 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD18F25D5916D009A9894 /* FriendCell.swift */; };
+		44DFD19525D5933E009A9894 /* FriendPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD19425D5933E009A9894 /* FriendPhotoViewController.swift */; };
+		44DFD19A25D59367009A9894 /* FriendPhotoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DFD19925D59367009A9894 /* FriendPhotoViewCell.swift */; };
+		44E7246025FCEF8D00534826 /* FriendFullPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44E7245F25FCEF8D00534826 /* FriendFullPhotoViewController.swift */; };
+		C722C8BFBDF9A63F552ABB55 /* Pods_ViTruVK_ViTruVKUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D0B296368E9D1E17CCB3AD9 /* Pods_ViTruVK_ViTruVKUITests.framework */; };
+		CE538E3F5A1950DE3433ED42 /* Pods_ViTruVKTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73038DDE0AAA1D906886E01A /* Pods_ViTruVKTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		44DE5ABC25C9A90200BF8BB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE5A9D25C9A90100BF8BB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44DE5AA425C9A90100BF8BB9;
+			remoteInfo = ViTruVK;
+		};
+		44DE5AC725C9A90200BF8BB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 44DE5A9D25C9A90100BF8BB9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 44DE5AA425C9A90100BF8BB9;
+			remoteInfo = ViTruVK;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0D0B296368E9D1E17CCB3AD9 /* Pods_ViTruVK_ViTruVKUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViTruVK_ViTruVKUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EFFF964F7AE004B0D6947CB /* Pods-ViTruVK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTruVK.release.xcconfig"; path = "Target Support Files/Pods-ViTruVK/Pods-ViTruVK.release.xcconfig"; sourceTree = "<group>"; };
+		40C1222535AC5F4174220E6D /* Pods-ViTruVK-ViTruVKUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTruVK-ViTruVKUITests.debug.xcconfig"; path = "Target Support Files/Pods-ViTruVK-ViTruVKUITests/Pods-ViTruVK-ViTruVKUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		441564F325EA812A0013C1C6 /* NewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsCell.swift; sourceTree = "<group>"; };
+		441564F425EA812A0013C1C6 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
+		4415650425EA83CC0013C1C6 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
+		4415650925EA97360013C1C6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4415650E25EB7C9C0013C1C6 /* newsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsArray.swift; sourceTree = "<group>"; };
+		444DE41525D8042A0023F5D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		444DE41D25D804390023F5D2 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		44BE7F7725EBBDBE006A9AD8 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		44BE7F7F25EBFDE2006A9AD8 /* UserPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPhotoViewController.swift; sourceTree = "<group>"; };
+		44CEE60E2622F7EC0038776F /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		44D451FE2610C0AE006EF191 /* Photos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photos.swift; sourceTree = "<group>"; };
+		44DCFE6E25FE424500B9CD3C /* ShowFullPhotoSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowFullPhotoSegue.swift; sourceTree = "<group>"; };
+		44DCFE832602663000B9CD3C /* Session.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		44DCFEB7260F214100B9CD3C /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		44DCFEC02610915E00B9CD3C /* LoginViewControllerAlter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerAlter.swift; sourceTree = "<group>"; };
+		44DE5AA525C9A90100BF8BB9 /* ViTruVK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ViTruVK.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DE5AA825C9A90100BF8BB9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		44DE5AAA25C9A90100BF8BB9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		44DE5AAC25C9A90100BF8BB9 /* LoginFormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFormController.swift; sourceTree = "<group>"; };
+		44DE5AAF25C9A90100BF8BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		44DE5AB125C9A90200BF8BB9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		44DE5AB425C9A90200BF8BB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		44DE5AB625C9A90200BF8BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44DE5ABB25C9A90200BF8BB9 /* ViTruVKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViTruVKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DE5ABF25C9A90200BF8BB9 /* ViTruVKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViTruVKTests.swift; sourceTree = "<group>"; };
+		44DE5AC125C9A90200BF8BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44DE5AC625C9A90200BF8BB9 /* ViTruVKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViTruVKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		44DE5ACA25C9A90200BF8BB9 /* ViTruVKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViTruVKUITests.swift; sourceTree = "<group>"; };
+		44DE5ACC25C9A90200BF8BB9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44DFD16F25D2FBEB009A9894 /* GroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsController.swift; sourceTree = "<group>"; };
+		44DFD17725D2FDB0009A9894 /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		44DFD17C25D30468009A9894 /* AllGroupsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsCell.swift; sourceTree = "<group>"; };
+		44DFD18125D3048C009A9894 /* AllGroupsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsController.swift; sourceTree = "<group>"; };
+		44DFD18725D59138009A9894 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
+		44DFD18F25D5916D009A9894 /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		44DFD19425D5933E009A9894 /* FriendPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewController.swift; sourceTree = "<group>"; };
+		44DFD19925D59367009A9894 /* FriendPhotoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendPhotoViewCell.swift; sourceTree = "<group>"; };
+		44E7245F25FCEF8D00534826 /* FriendFullPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendFullPhotoViewController.swift; sourceTree = "<group>"; };
+		5F01A7DAC280C9503F1E4FDC /* Pods-ViTruVK-ViTruVKUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTruVK-ViTruVKUITests.release.xcconfig"; path = "Target Support Files/Pods-ViTruVK-ViTruVKUITests/Pods-ViTruVK-ViTruVKUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5F5AA5DEF2F85ECED278CDE3 /* Pods_ViTruVK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViTruVK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		73038DDE0AAA1D906886E01A /* Pods_ViTruVKTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ViTruVKTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		82E05A042FB3FC629F15457E /* Pods-ViTruVKTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTruVKTests.release.xcconfig"; path = "Target Support Files/Pods-ViTruVKTests/Pods-ViTruVKTests.release.xcconfig"; sourceTree = "<group>"; };
+		A82DD92659549A7EF3EE9CB5 /* Pods-ViTruVK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTruVK.debug.xcconfig"; path = "Target Support Files/Pods-ViTruVK/Pods-ViTruVK.debug.xcconfig"; sourceTree = "<group>"; };
+		E9CA7AE5D0044CEEC0FC0BF8 /* Pods-ViTruVKTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ViTruVKTests.debug.xcconfig"; path = "Target Support Files/Pods-ViTruVKTests/Pods-ViTruVKTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		44DE5AA225C9A90100BF8BB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425CF1ACBF28F68362C1B477 /* Pods_ViTruVK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE5AB825C9A90200BF8BB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE538E3F5A1950DE3433ED42 /* Pods_ViTruVKTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE5AC325C9A90200BF8BB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C722C8BFBDF9A63F552ABB55 /* Pods_ViTruVK_ViTruVKUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A6F045DE02A78DEAA7F5136 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A82DD92659549A7EF3EE9CB5 /* Pods-ViTruVK.debug.xcconfig */,
+				0EFFF964F7AE004B0D6947CB /* Pods-ViTruVK.release.xcconfig */,
+				40C1222535AC5F4174220E6D /* Pods-ViTruVK-ViTruVKUITests.debug.xcconfig */,
+				5F01A7DAC280C9503F1E4FDC /* Pods-ViTruVK-ViTruVKUITests.release.xcconfig */,
+				E9CA7AE5D0044CEEC0FC0BF8 /* Pods-ViTruVKTests.debug.xcconfig */,
+				82E05A042FB3FC629F15457E /* Pods-ViTruVKTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		441564FA25EA826B0013C1C6 /* News */ = {
+			isa = PBXGroup;
+			children = (
+				441564F325EA812A0013C1C6 /* NewsCell.swift */,
+				441564F425EA812A0013C1C6 /* NewsCell.xib */,
+				4415650425EA83CC0013C1C6 /* NewsController.swift */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		444DE41425D803E30023F5D2 /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				444DE41525D8042A0023F5D2 /* User.swift */,
+				444DE41D25D804390023F5D2 /* Group.swift */,
+				4415650925EA97360013C1C6 /* News.swift */,
+				4415650E25EB7C9C0013C1C6 /* newsArray.swift */,
+				44D451FE2610C0AE006EF191 /* Photos.swift */,
+			);
+			path = Structures;
+			sourceTree = "<group>";
+		};
+		44CEE618262328090038776F /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				44CEE60E2622F7EC0038776F /* RealmManager.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		44DCFE822602661800B9CD3C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				44DCFE832602663000B9CD3C /* Session.swift */,
+				44DCFEB7260F214100B9CD3C /* NetworkManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		44DE5A9C25C9A90100BF8BB9 = {
+			isa = PBXGroup;
+			children = (
+				44DE5AA725C9A90100BF8BB9 /* ViTruVK */,
+				44DE5ABE25C9A90200BF8BB9 /* ViTruVKTests */,
+				44DE5AC925C9A90200BF8BB9 /* ViTruVKUITests */,
+				44DE5AA625C9A90100BF8BB9 /* Products */,
+				3A6F045DE02A78DEAA7F5136 /* Pods */,
+				C53808C710B1A7DC65978AE3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		44DE5AA625C9A90100BF8BB9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				44DE5AA525C9A90100BF8BB9 /* ViTruVK.app */,
+				44DE5ABB25C9A90200BF8BB9 /* ViTruVKTests.xctest */,
+				44DE5AC625C9A90200BF8BB9 /* ViTruVKUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		44DE5AA725C9A90100BF8BB9 /* ViTruVK */ = {
+			isa = PBXGroup;
+			children = (
+				44CEE618262328090038776F /* Database */,
+				44DCFE822602661800B9CD3C /* Network */,
+				441564FA25EA826B0013C1C6 /* News */,
+				444DE41425D803E30023F5D2 /* Structures */,
+				44DFD18625D59104009A9894 /* Friends */,
+				44DFD16E25D2FBB3009A9894 /* Groups */,
+				44DE5AA825C9A90100BF8BB9 /* AppDelegate.swift */,
+				44DE5AAA25C9A90100BF8BB9 /* SceneDelegate.swift */,
+				44DE5AAC25C9A90100BF8BB9 /* LoginFormController.swift */,
+				44DCFEC02610915E00B9CD3C /* LoginViewControllerAlter.swift */,
+				44DE5AAE25C9A90100BF8BB9 /* Main.storyboard */,
+				44DCFE6E25FE424500B9CD3C /* ShowFullPhotoSegue.swift */,
+				44DE5AB125C9A90200BF8BB9 /* Assets.xcassets */,
+				44DE5AB325C9A90200BF8BB9 /* LaunchScreen.storyboard */,
+				44DE5AB625C9A90200BF8BB9 /* Info.plist */,
+			);
+			path = ViTruVK;
+			sourceTree = "<group>";
+		};
+		44DE5ABE25C9A90200BF8BB9 /* ViTruVKTests */ = {
+			isa = PBXGroup;
+			children = (
+				44DE5ABF25C9A90200BF8BB9 /* ViTruVKTests.swift */,
+				44DE5AC125C9A90200BF8BB9 /* Info.plist */,
+			);
+			path = ViTruVKTests;
+			sourceTree = "<group>";
+		};
+		44DE5AC925C9A90200BF8BB9 /* ViTruVKUITests */ = {
+			isa = PBXGroup;
+			children = (
+				44DE5ACA25C9A90200BF8BB9 /* ViTruVKUITests.swift */,
+				44DE5ACC25C9A90200BF8BB9 /* Info.plist */,
+			);
+			path = ViTruVKUITests;
+			sourceTree = "<group>";
+		};
+		44DFD16E25D2FBB3009A9894 /* Groups */ = {
+			isa = PBXGroup;
+			children = (
+				44DFD16F25D2FBEB009A9894 /* GroupsController.swift */,
+				44DFD17725D2FDB0009A9894 /* GroupCell.swift */,
+				44DFD17C25D30468009A9894 /* AllGroupsCell.swift */,
+				44DFD18125D3048C009A9894 /* AllGroupsController.swift */,
+			);
+			path = Groups;
+			sourceTree = "<group>";
+		};
+		44DFD18625D59104009A9894 /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				44DFD18725D59138009A9894 /* FriendsController.swift */,
+				44DFD18F25D5916D009A9894 /* FriendCell.swift */,
+				44DFD19425D5933E009A9894 /* FriendPhotoViewController.swift */,
+				44DFD19925D59367009A9894 /* FriendPhotoViewCell.swift */,
+				44BE7F7725EBBDBE006A9AD8 /* AvatarView.swift */,
+				44E7245F25FCEF8D00534826 /* FriendFullPhotoViewController.swift */,
+				44BE7F7F25EBFDE2006A9AD8 /* UserPhotoViewController.swift */,
+			);
+			path = Friends;
+			sourceTree = "<group>";
+		};
+		C53808C710B1A7DC65978AE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5F5AA5DEF2F85ECED278CDE3 /* Pods_ViTruVK.framework */,
+				0D0B296368E9D1E17CCB3AD9 /* Pods_ViTruVK_ViTruVKUITests.framework */,
+				73038DDE0AAA1D906886E01A /* Pods_ViTruVKTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		44DE5AA425C9A90100BF8BB9 /* ViTruVK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DE5ACF25C9A90200BF8BB9 /* Build configuration list for PBXNativeTarget "ViTruVK" */;
+			buildPhases = (
+				CED31E7BA1CFCB80FE5B791D /* [CP] Check Pods Manifest.lock */,
+				44DE5AA125C9A90100BF8BB9 /* Sources */,
+				44DE5AA225C9A90100BF8BB9 /* Frameworks */,
+				44DE5AA325C9A90100BF8BB9 /* Resources */,
+				09B5DC933712514910FCD636 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ViTruVK;
+			productName = ViTruVK;
+			productReference = 44DE5AA525C9A90100BF8BB9 /* ViTruVK.app */;
+			productType = "com.apple.product-type.application";
+		};
+		44DE5ABA25C9A90200BF8BB9 /* ViTruVKTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DE5AD225C9A90200BF8BB9 /* Build configuration list for PBXNativeTarget "ViTruVKTests" */;
+			buildPhases = (
+				C9C80D4BC7BD93E37A0C56AC /* [CP] Check Pods Manifest.lock */,
+				44DE5AB725C9A90200BF8BB9 /* Sources */,
+				44DE5AB825C9A90200BF8BB9 /* Frameworks */,
+				44DE5AB925C9A90200BF8BB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44DE5ABD25C9A90200BF8BB9 /* PBXTargetDependency */,
+			);
+			name = ViTruVKTests;
+			productName = ViTruVKTests;
+			productReference = 44DE5ABB25C9A90200BF8BB9 /* ViTruVKTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		44DE5AC525C9A90200BF8BB9 /* ViTruVKUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 44DE5AD525C9A90200BF8BB9 /* Build configuration list for PBXNativeTarget "ViTruVKUITests" */;
+			buildPhases = (
+				4B1580FFB26FEC42CDB9DD29 /* [CP] Check Pods Manifest.lock */,
+				44DE5AC225C9A90200BF8BB9 /* Sources */,
+				44DE5AC325C9A90200BF8BB9 /* Frameworks */,
+				44DE5AC425C9A90200BF8BB9 /* Resources */,
+				4EE237B8A6E12F6FB65C4C35 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				44DE5AC825C9A90200BF8BB9 /* PBXTargetDependency */,
+			);
+			name = ViTruVKUITests;
+			productName = ViTruVKUITests;
+			productReference = 44DE5AC625C9A90200BF8BB9 /* ViTruVKUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		44DE5A9D25C9A90100BF8BB9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					44DE5AA425C9A90100BF8BB9 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					44DE5ABA25C9A90200BF8BB9 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 44DE5AA425C9A90100BF8BB9;
+					};
+					44DE5AC525C9A90200BF8BB9 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 44DE5AA425C9A90100BF8BB9;
+					};
+				};
+			};
+			buildConfigurationList = 44DE5AA025C9A90100BF8BB9 /* Build configuration list for PBXProject "ViTruVK" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 44DE5A9C25C9A90100BF8BB9;
+			productRefGroup = 44DE5AA625C9A90100BF8BB9 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				44DE5AA425C9A90100BF8BB9 /* ViTruVK */,
+				44DE5ABA25C9A90200BF8BB9 /* ViTruVKTests */,
+				44DE5AC525C9A90200BF8BB9 /* ViTruVKUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		44DE5AA325C9A90100BF8BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DE5AB525C9A90200BF8BB9 /* LaunchScreen.storyboard in Resources */,
+				44DE5AB225C9A90200BF8BB9 /* Assets.xcassets in Resources */,
+				441564F625EA812A0013C1C6 /* NewsCell.xib in Resources */,
+				44DE5AB025C9A90100BF8BB9 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE5AB925C9A90200BF8BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE5AC425C9A90200BF8BB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09B5DC933712514910FCD636 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViTruVK/Pods-ViTruVK-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViTruVK/Pods-ViTruVK-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViTruVK/Pods-ViTruVK-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4B1580FFB26FEC42CDB9DD29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViTruVK-ViTruVKUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EE237B8A6E12F6FB65C4C35 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViTruVK-ViTruVKUITests/Pods-ViTruVK-ViTruVKUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ViTruVK-ViTruVKUITests/Pods-ViTruVK-ViTruVKUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ViTruVK-ViTruVKUITests/Pods-ViTruVK-ViTruVKUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C9C80D4BC7BD93E37A0C56AC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViTruVKTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CED31E7BA1CFCB80FE5B791D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ViTruVK-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		44DE5AA125C9A90100BF8BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44D451FF2610C0AE006EF191 /* Photos.swift in Sources */,
+				44DFD18225D3048C009A9894 /* AllGroupsController.swift in Sources */,
+				44DCFE6F25FE424500B9CD3C /* ShowFullPhotoSegue.swift in Sources */,
+				44DFD18825D59138009A9894 /* FriendsController.swift in Sources */,
+				44DFD17825D2FDB0009A9894 /* GroupCell.swift in Sources */,
+				44BE7F8025EBFDE2006A9AD8 /* UserPhotoViewController.swift in Sources */,
+				44DE5AAD25C9A90100BF8BB9 /* LoginFormController.swift in Sources */,
+				44DFD19025D5916D009A9894 /* FriendCell.swift in Sources */,
+				441564F525EA812A0013C1C6 /* NewsCell.swift in Sources */,
+				44DFD17025D2FBEB009A9894 /* GroupsController.swift in Sources */,
+				444DE41E25D804390023F5D2 /* Group.swift in Sources */,
+				44DFD19A25D59367009A9894 /* FriendPhotoViewCell.swift in Sources */,
+				4415650F25EB7C9C0013C1C6 /* newsArray.swift in Sources */,
+				44CEE60F2622F7EC0038776F /* RealmManager.swift in Sources */,
+				44DE5AA925C9A90100BF8BB9 /* AppDelegate.swift in Sources */,
+				444DE41625D8042A0023F5D2 /* User.swift in Sources */,
+				44DCFEC12610915E00B9CD3C /* LoginViewControllerAlter.swift in Sources */,
+				4415650A25EA97360013C1C6 /* News.swift in Sources */,
+				4415650525EA83CC0013C1C6 /* NewsController.swift in Sources */,
+				44E7246025FCEF8D00534826 /* FriendFullPhotoViewController.swift in Sources */,
+				44BE7F7825EBBDBE006A9AD8 /* AvatarView.swift in Sources */,
+				44DFD19525D5933E009A9894 /* FriendPhotoViewController.swift in Sources */,
+				44DCFE842602663000B9CD3C /* Session.swift in Sources */,
+				44DE5AAB25C9A90100BF8BB9 /* SceneDelegate.swift in Sources */,
+				44DCFEB8260F214100B9CD3C /* NetworkManager.swift in Sources */,
+				44DFD17D25D30468009A9894 /* AllGroupsCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE5AB725C9A90200BF8BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DE5AC025C9A90200BF8BB9 /* ViTruVKTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		44DE5AC225C9A90200BF8BB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				44DE5ACB25C9A90200BF8BB9 /* ViTruVKUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		44DE5ABD25C9A90200BF8BB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44DE5AA425C9A90100BF8BB9 /* ViTruVK */;
+			targetProxy = 44DE5ABC25C9A90200BF8BB9 /* PBXContainerItemProxy */;
+		};
+		44DE5AC825C9A90200BF8BB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 44DE5AA425C9A90100BF8BB9 /* ViTruVK */;
+			targetProxy = 44DE5AC725C9A90200BF8BB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		44DE5AAE25C9A90100BF8BB9 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44DE5AAF25C9A90100BF8BB9 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		44DE5AB325C9A90200BF8BB9 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				44DE5AB425C9A90200BF8BB9 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		44DE5ACD25C9A90200BF8BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		44DE5ACE25C9A90200BF8BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		44DE5AD025C9A90200BF8BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A82DD92659549A7EF3EE9CB5 /* Pods-ViTruVK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViTruVK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MrGoodCat.ViTruVK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		44DE5AD125C9A90200BF8BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0EFFF964F7AE004B0D6947CB /* Pods-ViTruVK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViTruVK/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MrGoodCat.ViTruVK;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		44DE5AD325C9A90200BF8BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9CA7AE5D0044CEEC0FC0BF8 /* Pods-ViTruVKTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViTruVKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MrGoodCat.ViTruVKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViTruVK.app/ViTruVK";
+			};
+			name = Debug;
+		};
+		44DE5AD425C9A90200BF8BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 82E05A042FB3FC629F15457E /* Pods-ViTruVKTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViTruVKTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MrGoodCat.ViTruVKTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ViTruVK.app/ViTruVK";
+			};
+			name = Release;
+		};
+		44DE5AD625C9A90200BF8BB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40C1222535AC5F4174220E6D /* Pods-ViTruVK-ViTruVKUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViTruVKUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MrGoodCat.ViTruVKUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ViTruVK;
+			};
+			name = Debug;
+		};
+		44DE5AD725C9A90200BF8BB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F01A7DAC280C9503F1E4FDC /* Pods-ViTruVK-ViTruVKUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = ViTruVKUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MrGoodCat.ViTruVKUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ViTruVK;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		44DE5AA025C9A90100BF8BB9 /* Build configuration list for PBXProject "ViTruVK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DE5ACD25C9A90200BF8BB9 /* Debug */,
+				44DE5ACE25C9A90200BF8BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DE5ACF25C9A90200BF8BB9 /* Build configuration list for PBXNativeTarget "ViTruVK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DE5AD025C9A90200BF8BB9 /* Debug */,
+				44DE5AD125C9A90200BF8BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DE5AD225C9A90200BF8BB9 /* Build configuration list for PBXNativeTarget "ViTruVKTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DE5AD325C9A90200BF8BB9 /* Debug */,
+				44DE5AD425C9A90200BF8BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		44DE5AD525C9A90200BF8BB9 /* Build configuration list for PBXNativeTarget "ViTruVKUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				44DE5AD625C9A90200BF8BB9 /* Debug */,
+				44DE5AD725C9A90200BF8BB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 44DE5A9D25C9A90100BF8BB9 /* Project object */;
+}
