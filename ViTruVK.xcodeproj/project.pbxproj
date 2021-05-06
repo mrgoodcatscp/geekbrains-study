@@ -12,6 +12,7 @@
 		441564F625EA812A0013C1C6 /* NewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 441564F425EA812A0013C1C6 /* NewsCell.xib */; };
 		4415650525EA83CC0013C1C6 /* NewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415650425EA83CC0013C1C6 /* NewsController.swift */; };
 		4415650A25EA97360013C1C6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415650925EA97360013C1C6 /* News.swift */; };
+		4415650F25EB7C9C0013C1C6 /* newsArray.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4415650E25EB7C9C0013C1C6 /* newsArray.swift */; };
 		444DE41625D8042A0023F5D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DE41525D8042A0023F5D2 /* User.swift */; };
 		444DE41E25D804390023F5D2 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 444DE41D25D804390023F5D2 /* Group.swift */; };
 		44BE7F7825EBBDBE006A9AD8 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44BE7F7725EBBDBE006A9AD8 /* AvatarView.swift */; };
@@ -68,6 +69,7 @@
 		441564F425EA812A0013C1C6 /* NewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NewsCell.xib; sourceTree = "<group>"; };
 		4415650425EA83CC0013C1C6 /* NewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsController.swift; sourceTree = "<group>"; };
 		4415650925EA97360013C1C6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
+		4415650E25EB7C9C0013C1C6 /* newsArray.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = newsArray.swift; sourceTree = "<group>"; };
 		444DE41525D8042A0023F5D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		444DE41D25D804390023F5D2 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		44BE7F7725EBBDBE006A9AD8 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 				444DE41525D8042A0023F5D2 /* User.swift */,
 				444DE41D25D804390023F5D2 /* Group.swift */,
 				4415650925EA97360013C1C6 /* News.swift */,
+				4415650E25EB7C9C0013C1C6 /* newsArray.swift */,
 				44D451FE2610C0AE006EF191 /* Photos.swift */,
 			);
 			path = Structures;
@@ -536,6 +539,7 @@
 				44DFD17025D2FBEB009A9894 /* GroupsController.swift in Sources */,
 				444DE41E25D804390023F5D2 /* Group.swift in Sources */,
 				44DFD19A25D59367009A9894 /* FriendPhotoViewCell.swift in Sources */,
+				4415650F25EB7C9C0013C1C6 /* newsArray.swift in Sources */,
 				44CEE60F2622F7EC0038776F /* RealmManager.swift in Sources */,
 				44DE5AA925C9A90100BF8BB9 /* AppDelegate.swift in Sources */,
 				444DE41625D8042A0023F5D2 /* User.swift in Sources */,

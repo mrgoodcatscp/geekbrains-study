@@ -28,7 +28,6 @@ class NetworkManager {
         
     }
     
-    // TODO: Ужать до одной функции
     
 //    MARK: - Список друзей с аватарами
     
@@ -81,7 +80,6 @@ class NetworkManager {
         }
         
         dataTask.resume()
-        print(token)
         
     }
     
@@ -205,70 +203,6 @@ class NetworkManager {
         dataTask.resume()
     }
     
-//    MARK: - Получение новостной ленты
-    
-    func getNewsFeed(completion: @escaping (Result<[News], NetworkManagerError>) -> Void) {
-        
-        var urlComponents = URLComponents()
-        var newsList = [News]()
-        var profilesList = [User]()
-        var groupsList = [Group]()
-        
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.vk.com"
-        urlComponents.path = "/method/newsfeed.get"
-        urlComponents.queryItems = [
-            URLQueryItem(name: "access_token", value: token),
-            URLQueryItem(name: "filters", value: "post"),
-            URLQueryItem(name: "count", value: "20"),
-            URLQueryItem(name: "v", value: "5.130")
-        ]
-        
-        guard let url = urlComponents.url else {
-            completion(.failure(.urlError))
-            return
-        }
-        
-//        var request = URLRequest(url: url)
-//        request.httpMethod = "POST"
-//        request.timeoutInterval = 30
-        
-        let dataTask = NetworkManager.session.dataTask(with: url) { (data, response, error) in
-            
-            guard let data = data else {
-                completion(.failure(.dataError))
-                return
-            }
-            
-            do {
-                
-                let newsDecoded: NewsFeedResponse = try JSONDecoder().decode(NewsFeedResponse.self, from: data)
-                
-                for news in newsDecoded.response.items {
-                    newsList.append(news)
-                }
-                for profile in newsDecoded.response.profiles {
-                    profilesList.append(profile)
-                }
-                for group in newsDecoded.response.groups {
-                    groupsList.append(group)
-                }
-                
-            } catch {
-                
-                print(error.localizedDescription)
-                print(error)
-                completion(.failure(.decodingError))
-                return
-                
-            }
-            
-            completion(.success(newsList))
-
-        }
-    
-        dataTask.resume()
-    }
     
 //    MARK: - Конвертер изображений
     
