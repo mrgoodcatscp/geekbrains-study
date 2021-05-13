@@ -22,17 +22,13 @@ class NewsCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
     func setNews(news: News) {
         
-        self.userImage.image = UIImage(named: news.userPosted.avatar)
-        self.userName.text = news.userPosted.fullName
         self.newsText.text = news.text
-        self.newsImage.image = UIImage(named: news.photo)
+//        self.newsImage.image = UIImage(named: news.attachements)
         
-        self.userImage.layer.cornerRadius = self.userImage.frame.size.height / 2
     }
     
     

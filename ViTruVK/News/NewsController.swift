@@ -6,42 +6,100 @@
 //
 
 import UIKit
+import RealmSwift
 
 class NewsController: UIViewController {
-    
-    let news0001 = News(userPosted: id0001, text: """
-    Власти Северной Кореи требуют немедленного возврата дрезины, которую угнал российский дипломат.
-    Агентство ЦТАК опубликовало ноту МИД КНДР с требованием вернуть несамоходную дрезину, на которой 25 февраля вернулись в Россию сотрудники российского посольства и члены их семей. Как утверждает МИД, дипломаты завладели дрезиной незаконно.
-    
-    Российские СМИ сообщали, что дрезину изготовил третий секретарь посольства в КНДР Владислав Сорокин. Он был вынужден это сделать, поскольку все виды транспортного сообщения между Россией и Северной Кореей закрыты из-за пандемии. Преодолеть трёхкилометровую нейтральную полосу между пограничными станциями Туманган и Хасан можно только пешком по рельсам, что затруднительно сделать с детьми и вещами. По сведениям же корейских властей, он взял дрезину напрокат и не вернул.
-    """, photo: "news0001", like: true)
-    
-    let news0002 = News(userPosted: id0007, text: """
-    Посольство России в Непале сообщило об освобождении из секретной военной лаборатории 53-летнего Игоря Конюхова – исследователя Гималаев и троюродного брата знаменитого путешественника Фёдора Конюхова. В 2018 году непальские лесники приняли его за снежного человека и несколько лет изучали в секретной лаборатории.
-    
-    О том, что в Непале тайно содержится в неволе российский гражданин, стало известно после того, как группа непальских учёных опубликовала статью в журнале «Современная уфология», в которой описала ранее неизвестное науке существо, пойманное лесниками в предгорьях Гималаев. Существо имело рост более 2 метров, длинную косматую бороду и густой шерстяной покров. Одето оно было в тёплый вязаный свитер и грубые войлочные штаны и говорило на неизвестном непальцам языке.
-    
-    Статья случайно попалась на глаза российским специалистам, которые узнали среди слов этого языка, ошибочно принятого непальскими коллегами за диалект древних кроманьонцев, русские матерные выражения. После официального запроса МИД Конюхов был освобождён, а власти Непала принесли ему официальные извинения. В настоящее время исследователь вернулся к работе и отправился в Гималаи, отказавшись от возвращения в Россию.
-    
-    «Мы думали, что совершаем прорыв в культурологии. Снежный, как мы думали, человек был носителем удивительной и незнакомой нам культуры. Он умел играть на гитаре и пел очень душевные песни. Слов мы не понимали, но, когда показали их российским коллегам, они сказали, что это знаменитые хиты мэтра российской эстрады Юрия Лозы. Нам очень жаль, что мы помешали работе учёного. В следующий раз, поймав снежного человека, мы обязательно покажем его сначала представителям российского посольства», - сказал глава МИД Непала Прадил Кумар Гьявали.
-    
-    """, photo: "news0002", like: true)
-    
-    var newsArr = [news0001, news0002]
 
-    
     @IBOutlet weak var newsTable: UITableView!
     
+    private let networkManager = NetworkManager.shared
+    private let realmManager = RealmManager.shared
+    private var token = Session.shared.token
+    
+    var newsArrNotifications: NotificationToken?
+    var newsArr = [News]()
+
     let newsCellIdentifier = "newsXibCell"
+    let sectionsNumber: Int = 1
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         newsTable.delegate = self
         newsTable.dataSource = self
-        
+
         newsTable.register(UINib(nibName: "NewsCell", bundle: nil), forCellReuseIdentifier: newsCellIdentifier)
+        
+        loadData()
+//        loadLocalData()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
+    
+//    fileprivate func loadData(completion: (() -> Void)? = nil) {
+//        networkManager.getNewsFeed { [weak self] (result) in
+//            switch result {
+//            case .success(let userList):
+//                DispatchQueue.main.async {
+//                    try? self?.realmManager?.add(objects: userList)
+//                    self?.newsTable.reloadData()
+//                    completion?()
+//                }
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//    }
+    
+    func loadData() {
+        networkManager.getNewsFeed { [weak self] (result) in
+            switch result {
+            case .success(let newsList):
+                DispatchQueue.main.async {
+                    self?.newsArr = newsList
+                    self?.newsTable.reloadData()
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+//    fileprivate func loadLocalData() {
+//
+//        let newsResults: Results<News>? = self.realmManager?.getObjects()
+//        guard let newsList: [News] = newsResults?.toArray() else {return}
+//
+//        newsArrNotifications = newsResults?.observe { [weak self] (change) in
+//
+//            switch change {
+//
+//            case .initial(let users):
+//                print("Init: \(users)")
+//                self?.newsArr = newsList
+//                self?.newsTable.reloadData()
+//
+//            case .update(let users, deletions: let deletions, insertions: let insertions, modifications: let modifications):
+//                print("""
+//                    Recount: \(users.count)
+//                    Deleted: \(deletions)
+//                    Inserted: \(insertions)
+//                    Modified: \(modifications)
+//                """)
+//
+//                self?.newsArr = newsList
+//                self?.newsTable.reloadData()
+//
+//            case .error(let error):
+//                print("Error: \(error)")
+//                print("Description: \(error.localizedDescription)")
+//            }
+//
+//        }
+//    }
 
 }
 
