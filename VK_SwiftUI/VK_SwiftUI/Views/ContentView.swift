@@ -21,8 +21,7 @@ struct ContentView: View {
     private let vkStandardColor: String = "VKStandard"
     private let vkWhiteColor: CGColor = CGColor(red: 255, green: 255, blue: 255, alpha: 1)
     private let vkLogoName: String = "VK_Monochrome_Full_Logo"
-    private let vkLogoWidth: CGFloat = 287.65625
-    private let vkLogoHeight: CGFloat = 50
+    private let vkLogoWidth: CGFloat = 280
     
     private let isKeyboardShowingPub = Publishers.Merge(
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification).map { _ in false},
@@ -35,11 +34,13 @@ struct ContentView: View {
             
             Color(vkStandardColor)
                 .ignoresSafeArea()
+            
             VStack {
                 if isLogoShowing {
                     Image(vkLogoName)
                         .resizable()
-                        .frame(width: vkLogoWidth, height: vkLogoHeight)
+                        .scaledToFit()
+                        .frame(maxWidth: vkLogoWidth)
                         .padding(EdgeInsets(top: 64, leading: 0, bottom: 32, trailing: 0))
                 }
                 
@@ -71,15 +72,15 @@ struct ContentView: View {
                             .frame(width: 30, height: 30)
                             .foregroundColor(Color.white)
                     }
-                        
+                    
                 }
-                .padding(EdgeInsets(top: 30, leading: 0, bottom: 30, trailing: 0))
+                .padding([.top, .bottom], 30)
                 .disabled(login.isEmpty || password.isEmpty)
                 Spacer()
             }
             .textFieldStyle(RoundedBorderTextFieldStyle())
         }
-        .onReceive(isKeyboardShowingPub) {value in
+        .onReceive(isKeyboardShowingPub) { value in
             withAnimation {
                 self.isLogoShowing = !value
             }
@@ -104,8 +105,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-extension UIApplication {
-    func endEditing() {
-        self.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-    }
-}
+
