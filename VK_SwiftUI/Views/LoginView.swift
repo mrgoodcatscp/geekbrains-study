@@ -8,11 +8,13 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     
     @State private var login: String = ""
     @State private var password: String = ""
     @State private var isLogoShowing: Bool = true
+    @State private var isCredentialWrong: Bool = false
+    @Binding var showFriendListView: Bool
     
     private var commonTopPadding: CGFloat {
         isLogoShowing ? 0 : 64
@@ -51,12 +53,13 @@ struct ContentView: View {
                         Spacer()
                         TextField("Ведите логин", text: $login)
                             .frame(maxWidth: textFieldsMaxWidth)
+                            .autocapitalization(.none)
                     }
                     HStack {
                         Text("Пароль")
                             .foregroundColor(Color(vkWhiteColor))
                         Spacer()
-                        SecureField("Ведите пароль", text: $login)
+                        SecureField("Ведите пароль", text: $password)
                             .frame(maxWidth: textFieldsMaxWidth)
                     }
                 }
@@ -72,7 +75,6 @@ struct ContentView: View {
                             .frame(width: 30, height: 30)
                             .foregroundColor(Color.white)
                     }
-                    
                 }
                 .padding([.top, .bottom], 30)
                 .disabled(login.isEmpty || password.isEmpty)
@@ -88,10 +90,21 @@ struct ContentView: View {
         .onTapGesture {
             endEditing()
         }
+        .alert("Введён неправильный логин или пароль", isPresented: $isCredentialWrong) {
+            Button("ОК", role: .cancel) {
+                login = ""
+                password = ""
+            }
+        }
+        .navigationBarHidden(true)
     }
     
     private func onLoginButtonPressed() {
-        
+        if (login == "login" && password == "Pa$$w0rD") {
+            self.showFriendListView = true
+        } else {
+            self.isCredentialWrong = true
+        }
     }
     
     private func endEditing() {
@@ -99,9 +112,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        LoginView(showFriendListView: .constant(false))
     }
 }
 
